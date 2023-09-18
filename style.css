@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Outfit&family=Overpass:wght@400;700&family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --Very-dark-blue: hsl(233, 47%, 7%);
+
+  --Dark-desaturated-blue: hsl(244, 38%, 16%);
+  --Soft-violet: rgb(170, 92, 219);
+
+  --White: hsl(0, 0%, 100%);
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Slightly-transparent-white-stat: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--Very-dark-blue);
+  color: var(--White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.card {
+  max-width: 1000px;
+  background-color: var(--Dark-desaturated-blue);
+  border-radius: 0.5rem;
+  box-shadow: black 2px 5px 8px;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "text image";
+}
+.img-container {
+  grid-area: image;
+  background: url(./images/image-header-desktop.jpg) hsl(277, 64%, 61%);
+  height: 420px;
+  background-size: cover;
+  border-radius: 0.25rem 0.5rem 0.5rem 0.25rem;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(74, 0, 120, 0.545);
+  border-radius: 0.25rem 0.5rem 0.5rem 0.25rem;
+}
+.text-container {
+  padding: 60px;
+  padding-right: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 60px;
+}
+
+.text h1 span {
+  color: var(--Soft-violet);
+}
+.text h1 {
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+.text p {
+  color: var(--Slightly-transparent-white);
+}
+.stats {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+.stats span {
+  color: var(--Slightly-transparent-white-stat);
+}
